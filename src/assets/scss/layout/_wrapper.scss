@@ -1,0 +1,56 @@
+///
+/// Dimension by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Wrapper */
+
+	#wrapper {
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'column');
+		@include vendor('align-items', 'center');
+		@include vendor('justify-content', 'space-between');
+		position: relative;
+		min-height: 100vh;
+		width: 100%;
+		padding: 4rem 2rem;
+		z-index: 3;
+		background-image: -moz-radial-gradient(
+			rgba(0, 0, 0, 0.25) 30%,
+			rgba(0, 0, 0, 0) 75%
+		  );
+		  background-image: -webkit-radial-gradient(
+			rgba(0, 0, 0, 0.25) 30%,
+			rgba(0, 0, 0, 0) 75%
+		  );
+		  background-image: -ms-radial-gradient(
+			rgba(0, 0, 0, 0.25) 30%,
+			rgba(0, 0, 0, 0) 75%
+		  );
+		  background-image: radial-gradient(
+			rgba(0, 0, 0, 0.20) 30%,
+			rgba(0, 0, 0, 0) 75%
+		  );
+
+		&:before {
+			content: '';
+			display: block;
+		}
+
+		@include breakpoint(xlarge) {
+			padding: 1rem 2rem;
+		}
+
+		@include breakpoint(small) {
+			padding: 2rem 1rem;
+		}
+
+		@include breakpoint(xsmall) {
+			padding: 1rem;
+		}
+
+		&.page {
+			@include vendor('justify-content', 'flex-start');
+		}
+	}
